@@ -1,0 +1,25 @@
+BASHRC FILE 
+#HIVE VARIABLES START
+export HIVE_HOME=/usr/local/hive
+export HIVE_CONF_DIR=/usr/local/hive/conf
+export PATH=$HIVE_HOME/bin:$PATH
+export CLASSPATH=$CLASSPATH:/usr/local/hadoop/lib/*:.
+export CLASSPATH=$CLASSPATH:/usr/local/hive/lib/*:.
+export DERBY_HOME=/usr/local/db-derby-10.13.1.1-bin
+export PATH=$PATH:$DERBY_HOME/bin
+export CLASSPATH=$CLASSPATH:$DERBY_HOME/lib/derby.jar:$DERBY_HOME/lib/derbytools.jar
+#HIVE VARIABLES END
+
+
+export HADOOP_HOME=~/Downloads/hadoop-2.9.0
+export HIVE_CONF_DIR="${HIVE_CONF-DIR:-$HIVE_HOME/conf}"
+export HADOOP_HEAPSIZE=${HADOOP_HEAPSIZE:-256}
+export HIVE_CONF_DIR=$HIVE_CONF_DIR
+export HIVE_AUX_JARS_PATH=$HIVE_AUX_JARS_PATH
+
+
+
+HIVE_CONF_DIR="${HIVE_CONF_DIR}:-$HIVE_HOME/conf"
+export HIVE_CONF_DIR=$HIVE_CONF_DIR
+export HIVE_AUX_JARS_PATH=$HIVE_AUX_JARS_PATH
+export HADOOP_HOME=$HADOOP_HOME
