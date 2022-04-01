@@ -1,0 +1,9 @@
+BASHRC FILE
+
+#PIG VARIABLES START
+export PIG_HOME=/usr/local/pignew
+export PATH=$PATH:$PIG_HOME/bin
+export PIG_CLASSPATH=$PIG_HOME/conf:$HADOOP_INSTALL/etc/hadoop/bin
+export PIG_CONF_DIR=$PIG_HOME/conf
+export PIG_CLASSPATH=$PIG_CONF_DIR
+#PIG VARIABLES END
