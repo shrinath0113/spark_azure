@@ -1,19 +1,26 @@
 python3 
 ctrl+Z
 
+
+#BASHRC_FILE
+sudo nano ~/.bashrc
+export PATH=$PATH:~/.local/bin
+export PYTHONPATH=$SPARK_HOME/python:$PYTHONPATH
+export PYSPARK_DRIVER_PYTHON="jupyter"
+export PYSPARK_DRIVER_PYTHON_OPTS="notebook"
+export PYSPARK_PYTHON=python3
+source ~/.bashrc
+
+
 sudo apt install python3-pip
 
 pip install jupyter
 
 jupyter notebook
 
-export PATH=$PATH:~/.local/bin
-
-jupyter notebook
-
 ctrl+Z
 
-for scala install java first
+##for scala install java first
 
 sudo apt-get install scala
 
@@ -21,15 +28,7 @@ scala -version
 
 pip3 install  py4j
 
-export PYTHONPATH=$SPARK_HOME/python:$PYTHONPATH
-
-export PYSPARK_DRIVER_PYTHON="jupyter"
-
-export PYSPARK_DRIVER_PYTHON_OPTS="notebook"
-
-export PYSPARK_PYTHON=python3
-
-inside spark/python>>>open terminal
+##inside spark/python>>>open terminal
 
 jupyter notebook
 
