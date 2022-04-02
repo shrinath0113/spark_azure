@@ -10,6 +10,7 @@ YOUR PIG LINK HERE-https://www.youtube.com/watch?v=iDxL3YiVgA4
 
 YOUR SPARK LINK HERE- https://www.youtube.com/watch?v=YanzUI-30pI
 
+YOUR PYTHON , JUPYTER LINK HERE - https://www.youtube.com/watch?v=N8-3kCscjrU
 
 #DOWNLOAD TAR FILES
 Hadoop - https://dlcdn.apache.org/hadoop/common/hadoop-3.3.2/hadoop-3.3.2.tar.gz
