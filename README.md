@@ -34,3 +34,16 @@ Pig - https://dlcdn.apache.org/pig/pig-0.17.0/pig-0.17.0.tar.gz
 
 
 Spark - https://dlcdn.apache.org/spark/spark-3.2.1/spark-3.2.1-bin-hadoop3.2.tgz
+
+
+
+#CHECK HADOOP
+http://localhost:9870/dfshealth.html#tab-overview
+
+
+#CHECK HBASE
+http://localhost:16010/master-status
+
+
+#CHECK SPARK JOBS
+http://192.168.133.129:4040/jobs/
