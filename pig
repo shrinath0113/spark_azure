@@ -7,3 +7,6 @@ export PIG_CLASSPATH=$PIG_HOME/conf:$HADOOP_INSTALL/etc/hadoop/bin
 export PIG_CONF_DIR=$PIG_HOME/conf
 export PIG_CLASSPATH=$PIG_CONF_DIR
 #PIG VARIABLES END
+
+pig 
+grunt>
