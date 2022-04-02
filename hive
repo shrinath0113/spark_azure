@@ -1,3 +1,28 @@
+start-all.sh
+jps
+hdfs dfs -mkdir -p /user/hive/warehouse
+hdfs dfs /tmp
+hdfs dfs -chmod g+w /user/hive/warehouse
+hdfs dfs -chmod g+w /tmp
+
+sudo nano bin/hive-config.sh 
+export HADOOP_HOME=~/Downloads/hadoop-3.1.2/
+
+cp hive-env.sh.template hive-env.sh
+
+sudo nano bin/hive-env.sh 
+export HADOOP_HOME=~/Downloads/hadoop-3.1.2
+export HIVE_CONF_DIR="${HIVE_CONF-DIR:-$HIVE_HOME/conf}"
+export HADOOP_HEAPSIZE=${HADOOP_HEAPSIZE:-256}
+export HIVE_CONF_DIR=$HIVE_CONF_DIR
+export HIVE_AUX_JARS_PATH=$HIVE_AUX_JARS_PATH
+
+bin/schematool -initSchema -dbType derby
+
+bin/hive
+
+hive>
+
 BASHRC FILE 
 #HIVE VARIABLES START
 export HIVE_HOME=/usr/local/hive
@@ -11,7 +36,7 @@ export CLASSPATH=$CLASSPATH:$DERBY_HOME/lib/derby.jar:$DERBY_HOME/lib/derbytools
 #HIVE VARIABLES END
 
 
-export HADOOP_HOME=~/Downloads/hadoop-2.9.0
+export HADOOP_HOME=~/Downloads/hadoop-3.1.2
 export HIVE_CONF_DIR="${HIVE_CONF-DIR:-$HIVE_HOME/conf}"
 export HADOOP_HEAPSIZE=${HADOOP_HEAPSIZE:-256}
 export HIVE_CONF_DIR=$HIVE_CONF_DIR
