@@ -47,3 +47,5 @@ http://localhost:16010/master-status
 
 #CHECK SPARK JOBS
 http://192.168.133.129:4040/jobs/
+
+
