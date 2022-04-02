@@ -58,5 +58,12 @@ export SPARK_HOME=~/Downloads/spark-3.2.1-bin-hadoop3.2
 export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin
 #SPARK VARIABLES END
 
-command: source ~/.bashrc
+#PYTHON VARIABLES START
+export PATH=$PATH:~/.local/bin
+export PYTHONPATH=$SPARK_HOME/python:$PYTHONPATH
+export PYSPARK_DRIVER_PYTHON="jupyter"
+export PYSPARK_DRIVER_PYTHON_OPTS="notebook"
+export PYSPARK_PYTHON=python3
+#PYTHON VARIABLES END
 
+command: source ~/.bashrc
