@@ -1,14 +1,19 @@
-  start-all.sh
-  jps
-  hadoop version
+start-all.sh
+
+jps
+
+#check hadoop version
+hadoop -version
+
+#Check Hosts
+sudo gedit /etc/hosts
   
-  sudo gedit /etc/hosts
+sudo nano conf/hbase-env.sh
+export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
   
-  sudo nano conf/hbase-env.sh
-  java_home
-  
-   sudo nano conf/hbase-site.xml
-  
+sudo nano conf/hbase-site.xml
+
+<configuration>
   <property>
     <name>hbase.cluster.distributed</name>
     <value>true</value>
@@ -37,13 +42,12 @@
     <name>hbase.zookeeper.property.maxClientCnxns</name>  
     <value>35</value>
   </property>
+</configuration>
 
 
 rm -fr zookeeper/
 
 sudo gedit regionservers
-must be localhost
+#In this must be localhost
 
 bin ./start-hbase.sh
-
-
