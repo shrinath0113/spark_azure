@@ -1,0 +1,40 @@
+python3 
+ctrl+Z
+
+sudo apt install python3-pip
+
+pip install jupyter
+
+jupyter notebook
+
+export PATH=$PATH:~/.local/bin
+
+jupyter notebook
+
+ctrl+Z
+
+for scala install java first
+
+sudo apt-get install scala
+
+scala -version
+
+pip3 install  py4j
+
+export PYTHONPATH=$SPARK_HOME/python:$PYTHONPATH
+
+export PYSPARK_DRIVER_PYTHON="jupyter"
+
+export PYSPARK_DRIVER_PYTHON_OPTS="notebook"
+
+export PYSPARK_PYTHON=python3
+
+inside spark/python>>>open terminal
+
+jupyter notebook
+
+create new file 
+  import pyspark
+  from pyspark.sql import SparkSession
+  spark = SparkSession.builder.appName('TestingSpark').get0rCreate()
+  print(spark)
