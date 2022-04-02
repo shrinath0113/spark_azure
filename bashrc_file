@@ -5,7 +5,7 @@ command : sudo nano ~/.bashrc
 
 #JAVA VARIABLES START
 export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
-export PATH=$PATH:export PATH=$PATH:/usr/lib/jvm/java-8-openjdk-amd64/bin
+export PATH=$PATH:export PATH=$PATH:/usr/lib/jvm/java-11-openjdk-amd64/bin
 #JAVA VARIABLES END
 
 #HADOOP VARIABLES START
