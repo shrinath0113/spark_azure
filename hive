@@ -3,9 +3,9 @@ hduser@root:usr/local$   #ALL COMMANDS
 start-all.sh
 jps
 
-wget https://downloads.apache.org/hive/hive-2.3.9/apache-hive-2.3.9-bin.tar.gz
+sudo wget https://downloads.apache.org/hive/hive-2.3.9/apache-hive-2.3.9-bin.tar.gz
 
-tar xvzf apache-hive-2.3.9-bin.tar.gz
+sudo tar xvzf apache-hive-2.3.9-bin.tar.gz
 
 
 sudo nano ~/.bashrc
