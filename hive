@@ -115,11 +115,6 @@ conf$
 sudo chown -R hduser:hadoop /usr/local/
 sudo chown -R hduser:hadoop /usr/local/apache-hive-2.3.9-bin/
 sudo chown -R hduser:hadoop /usr/local/db-derby-10.13.1.1-bin/
-sudo chown -R hduser:hadoop /usr/local/hbase-2.4.11/
-sudo chown -R hduser:hadoop /usr/local/spark-3.2.1-bin-hadoop3.2/
-sudo chown -R hduser:hadoop /usr/local/pig-0.17.0/
-sudo chown -R hduser:hadoop /usr/local/nifi-1.15.3/
-
 
 bin$ ./schematool -initSchema -dbType derby
 
