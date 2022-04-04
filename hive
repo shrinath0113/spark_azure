@@ -1,3 +1,5 @@
+hduser@root:usr/local$   #ALL COMMANDS
+
 start-all.sh
 jps
 
@@ -5,52 +7,119 @@ wget https://downloads.apache.org/hive/hive-3.1.2/apache-hive-3.1.2-bin.tar.gz
 
 tar xvzf apache-hive-3.1.2-bin.tar.gz
 
-hdfs dfs -mkdir -p /user/hive/warehouse
-hdfs dfs -mkdir /tmp
-hdfs dfs -chmod g+w /user/hive/warehouse
-hdfs dfs -chmod g+w /tmp
 
+sudo nano ~/.bashrc
+#HIVE VARIABLES START
+export HIVE_HOME=/usr/local/apache-hive-3.1.2-bin
+export PATH=$PATH:$HIVE_HOME/bin
+export HIVE_CONF_DIR=$HIVE_HOME/conf
+export CLASSPATH=$CLASSPATH:$HADOOP_HOME/lib/*:.
+export CLASSPATH=$CLASSPATH:$HIVE_HOME/lib/*:.
+#HIVE VARIABLES END
+source ~/.bashrc
 
-sudo nano bin/hive-config.sh 
-export HADOOP_HOME=~/Downloads/hadoop-3.1.2/
+ 
+cd hadoop/bin/
 
-cp hive-env.sh.template hive-env.sh
+./hdfs dfs -ls /
+
+./hdfs dfs -ls /user
+
+./hdfs dfs -ls /user/hive
+
+./hdfs dfs -ls /user/hive/warehouse
+
+/usr/local$ cd apache-hive-3.1.2-bin/conf/
+
+ls
+
+sudo cp hive-env.sh.template hive.env.sh
 
 sudo nano bin/hive-env.sh 
-export HADOOP_HOME=~/Downloads/hadoop-3.1.2
-export HIVE_CONF_DIR="${HIVE_CONF-DIR:-$HIVE_HOME/conf}"
-export HADOOP_HEAPSIZE=${HADOOP_HEAPSIZE:-256}
-export HIVE_CONF_DIR=$HIVE_CONF_DIR
-export HIVE_AUX_JARS_PATH=$HIVE_AUX_JARS_PATH
+export HADOOP_HOME=/user/local/hadoop
 
-bin/schematool -initSchema -dbType derby
+~/Downloads$ wget http://archive.apache.org/dist/db/derby/db-derby-10.13.1.1-bin.tar.gz
 
-bin/hive
+sudo tar xvzf db-derby-10-13-1.1-bin.tar.gz -C /usr/local
 
-hive>
 
-BASHRC FILE 
-#HIVE VARIABLES START
-export HIVE_HOME=/usr/local/hive
-export HIVE_CONF_DIR=/usr/local/hive/conf
-export PATH=$HIVE_HOME/bin:$PATH
-export CLASSPATH=$CLASSPATH:/usr/local/hadoop/lib/*:.
-export CLASSPATH=$CLASSPATH:/usr/local/hive/lib/*:.
+sudo nano ~/.bashrc
+#DERBY VARIABLES START
 export DERBY_HOME=/usr/local/db-derby-10.13.1.1-bin
 export PATH=$PATH:$DERBY_HOME/bin
 export CLASSPATH=$CLASSPATH:$DERBY_HOME/lib/derby.jar:$DERBY_HOME/lib/derbytools.jar
-#HIVE VARIABLES END
+#DERBY VARIABLES END
+source ~/.bashrc
+
+/usr/local$ sudo mkdir $DERBY_HOME/data
+
+/usr/local$ cd apache-hive-3.1.2-bin/conf/
+
+ls
+
+sudo cp hive.default.xml.template hive-site.xml
+ 
+##### REF #####
+by default this will be your configurations:
+
+org.jpox.PersistenceManagerFactoryImpl 
+org.jpox.autoCreateSchema = false
+org.jpox.validateTables = false
+org.jpox.validateColumns = false
+org.jpox.validateConstraints = false
+org.jpox.storeManagerType = rdbms 
+org.jpox.autoCreateSchema = true
+org.jpox.autostartMechanismMode = checked
+org.jpox. transactionIsolation = read_committed 
+javax.jdo.option. DetachAllOnCommit= true
+javax.jdo.option.NontransactionalRead = true
+javax.jdo.option.ConnectionDriverName = org.apache.derby.jdbc.ClientDriver
+javax.jdo.option. ConnectionURL = jdbc:derby://hadoop1:1527/metastore_db;create = true
+javax.jdo.option.ConnectionUserName = APP 
+javax.jdo.option.ConnectionPassword = mine
+
+##### REF #####
+ 
+sudo nano hive-site.xml
+
+<property>
+  <name>hive.downloaded.resources.dir</name>
+  <!--
+  <value>${system: java.io.tmpdir}/${hive.session.id)_resources</value>
+  -->
+  <value>/home/hduser/hive/tmp/$(hive.session.id]_resources</value>
+  <description>Temporary local directory for added resources in the remote file system.</description>
+</property>
+
+<property>
+  <name>hive.exec.local.scratchdir</name>
+  <!--
+  <value>${system: java. to. tmpdir}/${system:user.name}</value>
+  -->
+  <value>/tmp/mydir</value> 
+  <description> Local scratch space for Hive jobs</description>
+</property>
+
+conf$
+sudo chown -R hduser:hadoop /usr/local/
+sudo chown -R hduser:hadoop /usr/local/apache-hive-3.1.2-bin/
+sudo chown -R hduser:hadoop /usr/local/db-derby-10.13.1.1-bin/
+sudo chown -R hduser:hadoop /usr/local/hbase-2.4.11-bin/
+sudo chown -R hduser:hadoop /usr/local/spark-3.2.1-bin-hadoop3.2/
+sudo chown -R hduser:hadoop /usr/local/pig-0.17.0/
+sudo chown -R hduser:hadoop /usr/local/nifi-1.15.3-bin/
 
 
-export HADOOP_HOME=~/Downloads/hadoop-3.1.2
-export HIVE_CONF_DIR="${HIVE_CONF-DIR:-$HIVE_HOME/conf}"
-export HADOOP_HEAPSIZE=${HADOOP_HEAPSIZE:-256}
-export HIVE_CONF_DIR=$HIVE_CONF_DIR
-export HIVE_AUX_JARS_PATH=$HIVE_AUX_JARS_PATH
+bin$ ./schematool -initSchema -dbType derby
+
+bin$ ./hive
+
+hive> show databases;
 
 
 
-HIVE_CONF_DIR="${HIVE_CONF_DIR}:-$HIVE_HOME/conf"
-export HIVE_CONF_DIR=$HIVE_CONF_DIR
-export HIVE_AUX_JARS_PATH=$HIVE_AUX_JARS_PATH
-export HADOOP_HOME=$HADOOP_HOME
+hdfs dfs -mkdir -p /user/hive/warehouse
+hdfs dfs -mkdir /tmp
+
+hdfs dfs -chmod g+w /user/hive/warehouse
+hdfs dfs -chmod g+w /tmp
