@@ -5,9 +5,9 @@
 
 YOUR HADOOP LINK HERE-https://www.youtube.com/watch?v=fimSTCBHwVs
 
-YOUR HBASE LINK HERE-https://www.youtube.com/watch?v=O9IvERaiK80 ,  https://www.youtube.com/watch?v=wYv4lpAtcqc
+YOUR HIVE LINK HERE-https://www.youtube.com/watch?v=TBmjp_QUUCc , https://www.youtube.com/watch?v=GSZhJYOQ6Qg
 
-YOUR HIVE LINK HERE-https://www.youtube.com/watch?v=Aw9cVgkE4F0 , https://www.youtube.com/watch?v=GSZhJYOQ6Qg
+YOUR HBASE LINK HERE-https://www.youtube.com/watch?v=O9IvERaiK80 ,  https://www.youtube.com/watch?v=wYv4lpAtcqc
 
 YOUR PIG LINK HERE-https://www.youtube.com/watch?v=iDxL3YiVgA4
 
@@ -23,10 +23,10 @@ YOUR PYTHON , JUPYTER LINK HERE - https://www.youtube.com/watch?v=N8-3kCscjrU
 Hadoop - https://dlcdn.apache.org/hadoop/common/hadoop-3.3.2/hadoop-3.3.2.tar.gz
 
 
+Hive - https://downloads.apache.org/hive/hive-2.3.9/apache-hive-2.3.9-bin.tar.gz
+
+
 HBASE - https://downloads.apache.org/hbase/2.4.11/hbase-2.4.11-bin.tar.gz
-
-
-Hive - https://downloads.apache.org/hive/hive-3.1.2/apache-hive-3.1.2-bin.tar.gz
 
 
 DERBY - https://archive.apache.org/dist/db/derby/db-derby-10.13.1.1/db-derby-10.13.1.1-bin.tar.gz
