@@ -43,7 +43,7 @@ ls
 
 sudo cp hive-env.sh.template hive.env.sh
 
-sudo nano bin/hive-env.sh 
+sudo nano hive-env.sh 
 export HADOOP_HOME=/user/local/hadoop
 
 ~/Downloads$ wget http://archive.apache.org/dist/db/derby/db-derby-10.13.1.1-bin.tar.gz
