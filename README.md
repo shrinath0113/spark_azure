@@ -3,7 +3,7 @@
 #REFER VIDEOS
 
 
-YOUR HADOOP LINK HERE- https://www.youtube.com/watch?v=4OtquWbcfNg , https://www.youtube.com/watch?v=KN6uzfQ42zE
+YOUR HADOOP LINK HERE- https://www.youtube.com/watch?v=4OtquWbcfNg , https://www.youtube.com/watch?v=KN6uzfQ42zE , https://www.youtube.com/watch?v=fimSTCBHwVs
 
 YOUR HBASE LINK HERE-https://www.youtube.com/watch?v=O9IvERaiK80 ,  https://www.youtube.com/watch?v=wYv4lpAtcqc
 
