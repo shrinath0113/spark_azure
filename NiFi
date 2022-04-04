@@ -1,0 +1,1 @@
+sudo chown -R hduser:hadoop /usr/local/nifi-1.15.3/
