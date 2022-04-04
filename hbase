@@ -18,7 +18,7 @@ cd
 hduser@shri:$
 sudo nano ~/.bashrc
 #HBASE VARIABLES START
-export HBASE_HOME=/usr/local/hbase-2.4.11-bin
+export HBASE_HOME=/usr/local/hbase-2.4.11
 export PATH=$PATH:$HBASE_HOME/bin
 export PATH=$PATH:$HBASE_HOME/sbin
 export CLASSPATH=$CLASSPATH:$HBASE_HOME/lib*:.
@@ -33,24 +33,16 @@ sudo gedit /etc/hosts
 $ cd /usr/local
 
 $ cd $HBASE_HOME/conf
-sudo nano conf/hbase-env.sh
+
+ls
+
+sudo nano hbase-env.sh
 export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
   
-sudo nano conf/hbase-site.xml
+sudo nano hbase-site.xml
 
+#ADD
 <configuration>
-  <property>
-    <name>hbase.cluster.distributed</name>
-    <value>true</value>
-  </property>
-  <property>
-    <name>hbase.tmp.dir</name>
-    <value>./tmp</value>
-  </property>
-  <property>
-    <name>hbase.unsafe.stream.capability.enforce</name>  
-    <value>false</value>
-  </property>
   <property>
     <name>hbase.rootdir</name>  
     <value>hdfs://localhost:54310/hbase</value>
@@ -69,11 +61,13 @@ sudo nano conf/hbase-site.xml
   </property>
 </configuration>
 
-cd../..
+cd ../..
 
 hduser@shri:/usr/local$ rm -fr zookeeper/
 
 cd hbase-2.4.11/conf
+
+sudo chown -R hduser:hadoop /usr/local/hbase-2.4.11/
 
 sudo gedit regionservers
 #In this must be localhost
