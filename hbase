@@ -1,3 +1,5 @@
+su hduser
+
 start-all.sh
 
 jps
@@ -5,9 +7,32 @@ jps
 #check hadoop version
 hadoop -version
 
+$cd /usr/local
+
+sudo wget https://downloads.apache.org/hbase/2.4.11/hbase-2.4.11-bin.tar.gz
+
+sudo tar xvzf hbase-2.4.11-bin.tar.gz
+
+cd 
+
+hduser@shri:$
+sudo nano ~/.bashrc
+#HBASE VARIABLES START
+export HBASE_HOME=/usr/local/hbase-2.4.11-bin
+export PATH=$PATH:$HBASE_HOME/bin
+export PATH=$PATH:$HBASE_HOME/sbin
+export CLASSPATH=$CLASSPATH:$HBASE_HOME/lib*:.
+#HBASE VARIABLES END
+source ~/.bashrc
+
+
 #Check Hosts
 sudo gedit /etc/hosts
   
+  
+$ cd /usr/local
+
+$ cd $HBASE_HOME/conf
 sudo nano conf/hbase-env.sh
 export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
   
@@ -28,7 +53,7 @@ sudo nano conf/hbase-site.xml
   </property>
   <property>
     <name>hbase.rootdir</name>  
-    <value>hdfs://localhost:9000/hbase</value>
+    <value>hdfs://localhost:54310/hbase</value>
   </property>
   <property>
     <name>hbase.master.port</name>  
@@ -36,7 +61,7 @@ sudo nano conf/hbase-site.xml
   </property>
   <property>
     <name>hbase.zookeeper.property.dataDir</name>  
-    <value>/home/ubuntu01/Downloads/zookeeper</value>
+    <value>/usr/local/zookeeper</value>
   </property>
   <property>
     <name>hbase.zookeeper.property.maxClientCnxns</name>  
@@ -44,10 +69,17 @@ sudo nano conf/hbase-site.xml
   </property>
 </configuration>
 
+cd../..
 
-rm -fr zookeeper/
+hduser@shri:/usr/local$ rm -fr zookeeper/
+
+cd hbase-2.4.11/conf
 
 sudo gedit regionservers
 #In this must be localhost
 
-bin ./start-hbase.sh
+cd ../bin
+
+bin$ ./start-hbase.sh
+
+jps
