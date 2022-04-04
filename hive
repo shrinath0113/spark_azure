@@ -44,7 +44,7 @@ ls
 sudo cp hive-env.sh.template hive.env.sh
 
 sudo nano hive-env.sh 
-export HADOOP_HOME=/user/local/hadoop
+export HADOOP_HOME=/usr/local/hadoop
 
 ~/Downloads$ wget http://archive.apache.org/dist/db/derby/db-derby-10.13.1.1-bin.tar.gz
 
@@ -65,7 +65,7 @@ source ~/.bashrc
 
 ls
 
-sudo cp hive.default.xml.template hive-site.xml
+sudo cp hive-default.xml.template hive-site.xml
  
 ##### REF #####
 by default this will be your configurations:
@@ -88,7 +88,7 @@ javax.jdo.option.ConnectionPassword = mine
 
 ##### REF #####
  
-sudo nano hive-site.xml
+sudo gedit hive-site.xml
 
 <property>
   <name>hive.downloaded.resources.dir</name>
@@ -108,14 +108,17 @@ sudo nano hive-site.xml
   <description> Local scratch space for Hive jobs</description>
 </property>
 
+** Also remove &#8; at line 3215,96  from hive-site.xml **
+
+
 conf$
 sudo chown -R hduser:hadoop /usr/local/
 sudo chown -R hduser:hadoop /usr/local/apache-hive-3.1.2-bin/
 sudo chown -R hduser:hadoop /usr/local/db-derby-10.13.1.1-bin/
-sudo chown -R hduser:hadoop /usr/local/hbase-2.4.11-bin/
+sudo chown -R hduser:hadoop /usr/local/hbase-2.4.11/
 sudo chown -R hduser:hadoop /usr/local/spark-3.2.1-bin-hadoop3.2/
 sudo chown -R hduser:hadoop /usr/local/pig-0.17.0/
-sudo chown -R hduser:hadoop /usr/local/nifi-1.15.3-bin/
+sudo chown -R hduser:hadoop /usr/local/nifi-1.15.3/
 
 
 bin$ ./schematool -initSchema -dbType derby
