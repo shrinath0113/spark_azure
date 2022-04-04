@@ -3,14 +3,14 @@ hduser@root:usr/local$   #ALL COMMANDS
 start-all.sh
 jps
 
-wget https://downloads.apache.org/hive/hive-3.1.2/apache-hive-3.1.2-bin.tar.gz
+wget https://downloads.apache.org/hive/hive-2.3.9/apache-hive-2.3.9-bin.tar.gz
 
-tar xvzf apache-hive-3.1.2-bin.tar.gz
+tar xvzf apache-hive-2.3.9-bin.tar.gz
 
 
 sudo nano ~/.bashrc
 #HIVE VARIABLES START
-export HIVE_HOME=/usr/local/apache-hive-3.1.2-bin
+export HIVE_HOME=/usr/local/apache-hive-2.3.9-bin
 export PATH=$PATH:$HIVE_HOME/bin
 export HIVE_CONF_DIR=$HIVE_HOME/conf
 export CLASSPATH=$CLASSPATH:$HADOOP_HOME/lib/*:.
@@ -37,7 +37,7 @@ cd hadoop/bin/
 
 ./hdfs dfs -ls /user/hive/warehouse
 
-/usr/local$ cd apache-hive-3.1.2-bin/conf/
+/usr/local$ cd apache-hive-2.3.9-bin/conf/
 
 ls
 
@@ -61,7 +61,7 @@ source ~/.bashrc
 
 /usr/local$ sudo mkdir $DERBY_HOME/data
 
-/usr/local$ cd apache-hive-3.1.2-bin/conf/
+/usr/local$ cd apache-hive-2.3.9-bin/conf/
 
 ls
 
@@ -113,7 +113,7 @@ sudo gedit hive-site.xml
 
 conf$
 sudo chown -R hduser:hadoop /usr/local/
-sudo chown -R hduser:hadoop /usr/local/apache-hive-3.1.2-bin/
+sudo chown -R hduser:hadoop /usr/local/apache-hive-2.3.9-bin/
 sudo chown -R hduser:hadoop /usr/local/db-derby-10.13.1.1-bin/
 sudo chown -R hduser:hadoop /usr/local/hbase-2.4.11/
 sudo chown -R hduser:hadoop /usr/local/spark-3.2.1-bin-hadoop3.2/
