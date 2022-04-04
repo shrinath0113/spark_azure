@@ -9,7 +9,7 @@ export PATH=$PATH:export PATH=$PATH:/usr/lib/jvm/java-11-openjdk-amd64/bin
 #JAVA VARIABLES END
 
 #HADOOP VARIABLES START
-export HADOOP_HOME=~/Downloads/hadoop-3.3.2
+export HADOOP_HOME=/usr/local/hadoop
 export HADOOP_INSTALL=$HADOOP_HOME
 export PATH=$PATH:$HADOOP_HOME/bin
 export PATH=$PATH:$HADOOP_HOME/sbin
