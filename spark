@@ -1,6 +1,11 @@
+sudo nano ~/.bashrc
 #SPARK VARIABLES START
 export SPARK_HOME=~/Downloads/spark-3.2.1-bin-hadoop3.2
 export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin
 #SPARK VARIABLES END
+source ~/.bashrc
+
+sudo chown -R hduser:hadoop /usr/local/spark-3.2.1-bin-hadoop3.2/
+
 spark-shell
 scala>
