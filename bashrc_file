@@ -38,6 +38,13 @@ export PATH=$PATH:$DERBY_HOME/bin
 export CLASSPATH=$CLASSPATH:$DERBY_HOME/lib/derby.jar:$DERBY_HOME/lib/derbytools.jar
 #DERBY VARIABLES END
 
+#HBASE VARIABLES START
+export HBASE_HOME=/usr/local/hbase-2.4.11-bin/hbase-2.4.11
+export PATH=$PATH:$HBASE_HOME/bin
+export PATH=$PATH:$HBASE_HOME/sbin
+export CLASSPATH=$CLASSPATH:$HBASE_HOME/lib*:.
+#HBASE VARIABLES END
+
 #PIG VARIABLES START
 export PIG_HOME=/usr/local/pig-0.17.0
 export PATH=$PATH:$PIG_HOME/bin
@@ -45,13 +52,6 @@ export PIG_CLASSPATH=$PIG_HOME/conf:$HADOOP_INSTALL/etc/hadoop/bin
 export PIG_CONF_DIR=$PIG_HOME/conf
 export PIG_CLASSPATH=$PIG_CONF_DIR
 #PIG VARIABLES END
-
-#HBASE VARIABLES START
-export HBASE_HOME=/usr/local/hbase-2.4.11-bin/hbase-2.4.11
-export PATH=$PATH:$HBASE_HOME/bin
-export PATH=$PATH:$HBASE_HOME/sbin
-export CLASSPATH=$CLASSPATH:$HBASE_HOME/lib*:.
-#HBASE VARIABLES END
 
 #SPARK VARIABLES START
 export SPARK_HOME=/usr/local/spark-3.2.1-bin-hadoop3.2
