@@ -61,7 +61,7 @@ sudo nano hbase-site.xml
   </property>
 </configuration>
 
-cd ../..
+cd ../../..
 
 hduser@shri:/usr/local$ rm -fr zookeeper/
 
