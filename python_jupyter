@@ -35,5 +35,5 @@ jupyter notebook
 create new file 
   import pyspark
   from pyspark.sql import SparkSession
-  spark = SparkSession.builder.appName('TestingSpark').get0rCreate()
+  spark = SparkSession.builder.appName('TestingSpark').getOrCreate()
   print(spark)
