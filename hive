@@ -1,9 +1,15 @@
 start-all.sh
 jps
+
+wget https://downloads.apache.org/hive/hive-3.1.2/apache-hive-3.1.2-bin.tar.gz
+
+tar xvzf apache-hive-3.1.2-bin.tar.gz
+
 hdfs dfs -mkdir -p /user/hive/warehouse
 hdfs dfs -mkdir /tmp
 hdfs dfs -chmod g+w /user/hive/warehouse
 hdfs dfs -chmod g+w /tmp
+
 
 sudo nano bin/hive-config.sh 
 export HADOOP_HOME=~/Downloads/hadoop-3.1.2/
