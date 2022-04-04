@@ -39,7 +39,7 @@ export CLASSPATH=$CLASSPATH:$DERBY_HOME/lib/derby.jar:$DERBY_HOME/lib/derbytools
 #DERBY VARIABLES END
 
 #HBASE VARIABLES START
-export HBASE_HOME=/usr/local/hbase-2.4.11-bin/hbase-2.4.11
+export HBASE_HOME=/usr/local/hbase-2.4.11
 export PATH=$PATH:$HBASE_HOME/bin
 export PATH=$PATH:$HBASE_HOME/sbin
 export CLASSPATH=$CLASSPATH:$HBASE_HOME/lib*:.
@@ -67,3 +67,7 @@ export PYSPARK_PYTHON=python3
 #PYTHON VARIABLES END
 
 command: source ~/.bashrc
+
+sudo chown -R hduser:hadoop /usr/local/spark-3.2.1-bin-hadoop3.2/
+sudo chown -R hduser:hadoop /usr/local/pig-0.17.0/
+sudo chown -R hduser:hadoop /usr/local/nifi-1.15.3/
