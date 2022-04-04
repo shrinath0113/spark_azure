@@ -108,7 +108,7 @@ sudo gedit hive-site.xml
   <description> Local scratch space for Hive jobs</description>
 </property>
 
-** Also remove &#8; at line 3215,96  from hive-site.xml **
+#FOR ABOVE 3.x.x versions ** Also remove &#8; at line 3215,96  from hive-site.xml **
 
 
 conf$
