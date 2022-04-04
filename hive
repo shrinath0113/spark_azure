@@ -41,7 +41,7 @@ cd hadoop/bin/
 
 ls
 
-sudo cp hive-env.sh.template hive.env.sh
+sudo cp hive-env.sh.template hive-env.sh
 
 sudo nano hive-env.sh 
 export HADOOP_HOME=/usr/local/hadoop
