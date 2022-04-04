@@ -1,1 +1,39 @@
+java -version 
+
+apt install openjdk-14-jre-headless
+
+sudo wget https://www.apache.org/dyn/closer.lua?path=/nifi/1.14.0/nifi-1.14.0-bin.tar.gz
+
+sudo tar -xvzf nifi-1.14.0-bin.tar.gz
+
+sudo iptables _A INPUT -p tcp --dport 8443 -j ACCEPT
+
+cd nifi-1.14.0
+
+cd conf
+
+ls 
+
+sudo nano nifi.properties
+#change 
+nifi.web.https.host=164.52.216.151
+
+cd ..
+
+bin/nifi.sh start
+
+cat logs/nifi-app.log
+
+#go to NiFi generated portal and login with generated Username and Password
+
+#we have to so logout change username and password
+
+bin/nifi.sh stop
+
+bin/nifi.sh set-single-user-credentials shri "shri@123"
+
+bin/nifi.sh start
+
+cat logs/nifi-app.log
+
 sudo chown -R hduser:hadoop /usr/local/nifi-1.15.3/
