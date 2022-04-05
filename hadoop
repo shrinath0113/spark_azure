@@ -27,6 +27,8 @@ wget https://dlcdn.apache.org/hadoop/common/hadoop-3.3.2/hadoop-3.3.2.tar.gz
 
 tar xvzf hadoop-3.3.2.tar.gz
 
+su root
+
 root@root:/home/hduser$  sudo adduser hduser sudo
 
 sudo su hduser
@@ -122,7 +124,7 @@ sudo nano /usr/local/hadoop/etc/hadoop/hdfs-site.xml
 </property>
 <property>
 <name>dfs.block.size</name>
-<value>1048576</value>
+<value>134217728</value>
 </property>
 <property>
 <name>dfs.namenode.name.dir</name>
