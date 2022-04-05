@@ -46,7 +46,7 @@ export CLASSPATH=$CLASSPATH:$HBASE_HOME/lib*:.
 #HBASE VARIABLES END
 
 #PIG VARIABLES START
-export PIG_HOME=/usr/local/pig-0.17.0
+export PIG_HOME=/usr/local/pignew
 export PATH=$PATH:$PIG_HOME/bin
 export PIG_CLASSPATH=$PIG_HOME/conf:$HADOOP_INSTALL/etc/hadoop/bin
 export PIG_CONF_DIR=$PIG_HOME/conf
