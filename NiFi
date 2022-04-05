@@ -30,10 +30,12 @@ cat logs/nifi-app.log
 
 bin/nifi.sh stop
 
-bin/nifi.sh set-single-user-credentials shri "shri@123"
+bin/nifi.sh set-single-user-credentials shri "shri@123456789"
 
 bin/nifi.sh start
 
 cat logs/nifi-app.log
+
+https://localhost:8443/nifi
 
 sudo chown -R hduser:hadoop /usr/local/nifi-1.15.3/
