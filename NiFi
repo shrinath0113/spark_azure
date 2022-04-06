@@ -51,6 +51,8 @@ login with credentials you have set >>  username user_password
 
 bin/nifi.sh stop
 
+## FOR MORE REFERENCE ##
+https://nifi.apache.org/docs.html
 
 ###Not Require###
 cat logs/nifi-app.log
