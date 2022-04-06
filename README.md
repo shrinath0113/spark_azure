@@ -56,5 +56,5 @@ http://192.168.133.129:4040/jobs/
 http://localhost:8888/tree
 
 
-#CHECK NIFI LOGIN PAGE
+#CHECK NIFI PAGE
 https://localhost:8443/nifi
