@@ -18,7 +18,7 @@ pip3 install jupyter
 
 jupyter notebook
 
-ctrl+Z
+ctrl+C
 
 ##for scala install java first
 
