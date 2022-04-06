@@ -15,7 +15,7 @@ YOUR SPARK LINK HERE- https://www.youtube.com/watch?v=YanzUI-30pI
 
 YOUR PYTHON , JUPYTER LINK HERE - https://www.youtube.com/watch?v=N8-3kCscjrU
 
-
+YOUR NIFI LINK HERE - https://www.youtube.com/watch?v=MLwDjthTvCo
 
 #DOWNLOAD TAR FILES
 
@@ -38,7 +38,7 @@ Pig - https://dlcdn.apache.org/pig/pig-0.17.0/pig-0.17.0.tar.gz
 Spark - https://dlcdn.apache.org/spark/spark-3.2.1/spark-3.2.1-bin-hadoop3.2.tgz
 
 
-
+NiFi - https://www.apache.org/dyn/closer.lua?path=/nifi/1.16.0/nifi-1.16.0-bin.tar.gz
 
 #CHECK HADOOP
 http://localhost:9870/dfshealth.html#tab-overview
@@ -54,3 +54,7 @@ http://192.168.133.129:4040/jobs/
 
 #JUPYTER NOTEBOOK
 http://localhost:8888/tree
+
+
+#CHECK NIFI LOGIN PAGE
+https://localhost:8443/nifi
