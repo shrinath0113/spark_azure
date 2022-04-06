@@ -16,7 +16,7 @@ YOUR SPARK LINK HERE- https://www.youtube.com/watch?v=YanzUI-30pI
 YOUR PYTHON , JUPYTER LINK HERE - https://www.youtube.com/watch?v=N8-3kCscjrU
 
 YOUR NIFI LINK HERE - https://www.youtube.com/watch?v=MLwDjthTvCo
-
+                    - https://nifi.apache.org/docs.html
 #DOWNLOAD TAR FILES
 
 
