@@ -2,16 +2,17 @@
 
 #REFER VIDEOS
 
+YOUR UBUNTU LINK HERE - https://www.youtube.com/watch?v=x5MhydijWmc
 
-YOUR HADOOP LINK HERE-https://www.youtube.com/watch?v=fimSTCBHwVs
+YOUR HADOOP LINK HERE - https://www.youtube.com/watch?v=fimSTCBHwVs
 
-YOUR HIVE LINK HERE-https://www.youtube.com/watch?v=TBmjp_QUUCc , https://www.youtube.com/watch?v=GSZhJYOQ6Qg
+YOUR HIVE LINK HERE - https://www.youtube.com/watch?v=TBmjp_QUUCc , https://www.youtube.com/watch?v=GSZhJYOQ6Qg
 
-YOUR HBASE LINK HERE-https://www.youtube.com/watch?v=O9IvERaiK80 ,  https://www.youtube.com/watch?v=wYv4lpAtcqc
+YOUR HBASE LINK HERE - https://www.youtube.com/watch?v=O9IvERaiK80 ,  https://www.youtube.com/watch?v=wYv4lpAtcqc
 
-YOUR PIG LINK HERE-https://www.youtube.com/watch?v=iDxL3YiVgA4
+YOUR PIG LINK HERE - https://www.youtube.com/watch?v=iDxL3YiVgA4
 
-YOUR SPARK LINK HERE- https://www.youtube.com/watch?v=YanzUI-30pI
+YOUR SPARK LINK HERE - https://www.youtube.com/watch?v=YanzUI-30pI
 
 YOUR PYTHON , JUPYTER LINK HERE - https://www.youtube.com/watch?v=N8-3kCscjrU
 
