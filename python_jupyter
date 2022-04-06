@@ -27,6 +27,10 @@ sudo apt-get install scala
 scala -version
 
 pip3 install  py4j
+pip3 install pandas 
+pip3 install openpyxl
+pip3 install findspark
+
 
 ##inside spark/python>>>open terminal
 
