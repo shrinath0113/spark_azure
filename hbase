@@ -65,9 +65,9 @@ cd ../../..
 
 hduser@shri:/usr/local$ rm -fr zookeeper/
 
-cd hbase-2.4.11-bin/hbase-2.4.11/conf
+cd hbase-2.4.11/conf
 
-sudo chown -R hduser:hadoop /usr/local/hbase-2.4.11-bin/hbase-2.4.11
+sudo chown -R hduser:hadoop /usr/local/hbase-2.4.11
 
 sudo gedit regionservers
 #In this must be localhost
